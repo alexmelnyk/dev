@@ -28,6 +28,8 @@
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
+                <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+                <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -36,8 +38,8 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="324">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
                 <marker date="1478529501551" expanded="true" signature="169:272" ph="..." />
               </folding>
@@ -287,16 +289,16 @@
       <workItem from="1478249615526" duration="8141000" />
       <workItem from="1478275403295" duration="700000" />
       <workItem from="1478516830590" duration="8000" />
-      <workItem from="1478516862277" duration="6713000" />
+      <workItem from="1478516862277" duration="8504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37899000" />
+    <option name="totallyTimeSpent" value="39690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1415" y="24" width="1871" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19726028" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -372,6 +374,8 @@
           <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+            <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+            <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -404,6 +408,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+            <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+            <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -456,6 +462,8 @@
           <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+            <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+            <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -508,6 +516,8 @@
           <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+            <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+            <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -658,6 +668,8 @@
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+            <marker date="1478525552789" expanded="true" signature="182:341" ph="{...}" />
+            <marker date="1478525552789" expanded="true" signature="391:734" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -705,8 +717,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="324">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
             <marker date="1478529501551" expanded="true" signature="169:272" ph="..." />
           </folding>
