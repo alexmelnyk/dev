@@ -14,15 +14,4 @@
     </li>
 </ul>
 
-<div *ngIf="selectedTask">
-
-    <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedTask.title" placeholder="title">
-    </div>
-    <div>
-        <label>description: </label>
-        <input [(ngModel)]="selectedTask.description" placeholder="description">
-    </div>
-
-</div>
+<task-detail [task]="selectedTask" ></task-detail>

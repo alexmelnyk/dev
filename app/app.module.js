@@ -30,8 +30,7 @@ var AppModule = (function () {
                 task_detail_component_1.TaskDetail
             ],
             bootstrap: [
-                app_component_1.AppComponent,
-                task_detail_component_1.TaskDetail
+                app_component_1.AppComponent
             ]
         }), 
         __metadata('design:paramtypes', [])

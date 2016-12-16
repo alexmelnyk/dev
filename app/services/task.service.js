@@ -9,27 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 /**
- * Created by leha on 15.12.16.
+ * Created by leha on 16.12.16.
  */
 var core_1 = require('@angular/core');
-var task_1 = require('../task/task');
-var TaskDetail = (function () {
-    function TaskDetail() {
+var TaskService = (function () {
+    function TaskService() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', task_1.Task)
-    ], TaskDetail.prototype, "task", void 0);
-    TaskDetail = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'task-detail',
-            templateUrl: 'task-detail.component.template.html'
-        }), 
+    TaskService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], TaskDetail);
-    return TaskDetail;
+    ], TaskService);
+    return TaskService;
 }());
-exports.TaskDetail = TaskDetail;
-;
-//# sourceMappingURL=task-detail.component.js.map
+exports.TaskService = TaskService;
+//# sourceMappingURL=task.service.js.map

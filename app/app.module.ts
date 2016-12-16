@@ -18,8 +18,7 @@ import { TaskDetail }  from './components/task-detail/task-detail.component';
         TaskDetail
     ],
     bootstrap:    [
-        AppComponent,
-        TaskDetail
+        AppComponent
     ]
 })
 

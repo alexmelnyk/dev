@@ -1,1 +1,12 @@
-<p>ce</p>
+<div *ngIf="task">
+
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="task.title" placeholder="title">
+    </div>
+    <div>
+        <label>description: </label>
+        <input [(ngModel)]="task.description" placeholder="description">
+    </div>
+
+</div>
