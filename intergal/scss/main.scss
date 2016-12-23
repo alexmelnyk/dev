@@ -1,0 +1,418 @@
+@import 'layout/variables';
+@import 'layout/base';
+@import 'layout/normalize';
+@import 'layout/grid';
+@import 'layout/fonts';
+
+@import 'test';
+@import 'fontello';
+
+@charset "utf-8";
+
+.top-section{
+	background: url('../img/top-section-bg.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100%;
+	min-height: 730px;
+	position: relative;
+	/*-webkit-clip-path: polygon(0% 0%, 20% 10px, 40% 25px, 60% 25px, 80% 10px, 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0% 0%, 20% 10px, 40% 20px, 60% 20px, 80% 10px, 100% 0, 100% 100%, 0 100%);*/
+	.menu-section{
+		background: $light-grey;
+		padding: 15px 0;
+		p{
+			font-family: 'Roboto Bold';
+		}
+		.img-wrapper{
+			height: 100%;
+		}
+	}
+	/*&:after{
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-clip-path: ellipse(50% 6% at 50% 94%);
+		clip-path: ellipse(50% 6% at 50% 94%);
+		background-color: #fff;
+	}*/
+	.nav{
+		padding: 30px 0;
+		position: absolute;
+		width: 100%;
+		z-index: 99999999;
+		ul.menu{
+			border-bottom: 1px solid $white;
+			padding-bottom: 7px;
+			text-align: justify;
+			position: relative;
+			.js-hover-div{
+				position: absolute;
+				//width: 30px;
+				height: 4px;
+				background: $red;
+				top: 22px;
+				left: 0;
+			}
+			li{
+				display: inline-block;
+				padding: 0;
+				a{
+					color: $white;
+					font-size: 18px;
+					font-family: 'Roboto Condensed Bold';
+					text-transform: uppercase;
+				}
+			}
+			&:after{
+				content: '';
+				display: inline-block;
+				width: 100%;
+			}
+		}
+		&.js-sticky{
+			background: rgba(0,0,0,0.7);
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			@include transition(background .3s ease);
+		}
+	}
+	.top-description{
+		position: relative;
+		margin-bottom: 30px;
+		padding-top: 140px;
+		&--inner{
+			position: relative;
+			border-left: 1px solid $white;
+			border-right: 1px solid $white;
+			border-bottom: 1px solid $white;
+			padding: 80px 100px;
+			p{
+				color: $white;
+				font-family: 'Roboto Regular';
+				line-height: 1.8em;
+				text-align: center;
+			}
+			&--img{
+				position: absolute;
+				top: -23px;
+				left: 50%;
+				@include transform(translate(-50%,0));
+				&:after,
+				&:before{
+					content: '';
+					width: 280px;
+					height: 1px;
+					background-color: $white;
+					position: absolute;
+					top: 50%;
+				}
+				&:after{
+					left: 110%;
+				}
+				&:before{
+					right: 110%;
+				}
+			}
+		}
+	}
+	.top-description-under{
+		text-align: center;
+		color: $white;
+		font-family: 'Roboto Condensed Bold';
+		h1{
+			text-transform: uppercase;
+			font-size: 36px;
+		}
+		h3{
+			font-size: 21px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.top-section-under{
+	padding: 50px 0;
+	h2{
+		position: relative;
+		color: $red;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 43px;
+		font-family: 'Roboto Condensed Bold';
+		display: block;
+		border-bottom: 1px solid $grey;
+		padding-bottom: 30px;
+		&:after{
+			position: absolute;
+			content: '';
+			background: $white url('../img/intergal-logo-grey.png') no-repeat center center;
+			width: 140px;
+			height: 35px;
+			top: 78%;
+			left: 50%;
+			@include transform(translate(-50%,0));
+		}
+	}
+}
+
+.contacts{
+	background: $light-grey url('../img/contacts-bg.jpg') no-repeat center top;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 60px 0;
+	h3{
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed Bold';
+		font-size: 38px;
+		display: block;
+		border-bottom: 1px solid $black;
+		padding-bottom: 5px;
+		margin-bottom: 45px;
+	}
+	&--left{
+		ul{
+			li{
+				margin-bottom: 15px;
+				p{
+					font-family: 'Roboto Regular';
+					font-size: 16px;
+					display: inline-block;
+					vertical-align: middle;
+					&:before{
+						display: inline-block;
+						vertical-align: middle;
+						content: '';
+						width: 19px;
+						height: 27px;
+						background: url('../img/contacts-sprite.png') no-repeat;
+						margin-right: 15px;
+					}
+				}
+				&:last-child{
+					p{
+						&:before{
+							background-position: 0 110%;
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	&--right{
+		form{
+			.input{
+				margin-bottom: 20px;
+				border: 1px solid $black;
+				padding-left: 20px;
+				font-family: 'Roboto Regular';
+				&[type='email']{
+					height: 40px;
+				}
+				&[type='text']{
+					height: 150px;
+					padding-top: 10px;
+				}
+			}
+			.button{
+				width: 100%;
+				color: $red;
+				&:hover{
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	background: $light-grey;
+	font-family: 'Roboto Regular';
+	padding: 45px 0;
+	p{
+		font-size: 13px;
+	}
+	ul.footer--nav{
+		width: 100%;
+	}
+	&--nav{
+		width: 80%;
+		margin: 0 auto;
+		a{
+			color: $black;
+			font-size: 13px;
+			&:not(:last-child):after{
+				content: ',';
+				margin-right: 2px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.objects{
+	padding: 50px 0;
+	&--object{
+		text-align: center;
+		&--thumbnail{
+			margin-bottom: 20px;
+		}
+		&--title{
+			font-size: 30px;
+			font-family: 'Roboto Thin';
+			margin-bottom: 5px;
+		}
+		&--tel{
+			font-family: 'Roboto Bold';
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+			font-size: 21px;
+			position: relative;
+			&:before{
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 19px;
+				height: 20px;
+				background: url('../img/contacts-sprite.png') no-repeat center bottom;
+				margin-right: 5px;
+			}
+			&:after{
+				position: absolute;
+				content: '';
+				width: 100%;
+				height: 1px;
+				background: $grey;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		p:not(.objects--object--tel){
+			text-align: left;
+			width: 80%;
+			margin: 0 auto 20px;
+			font-size: 16px;
+			font-family: 'Roboto Light';
+		}
+		img:not(.objects--object--thumbnail){
+			margin-bottom: 40px;
+		}
+		ul{
+			display: inline-block;
+			vertical-align: top;
+			width: 300px;
+			&:before{
+				display: block;
+				font-size: 21px;
+				font-family: 'Roboto Light';
+				text-align: left;
+				max-width: 230px;
+				margin-bottom: 20px;
+			}
+			&:nth-of-type(1){
+				margin-right: 30px;
+				&:before{
+					content: 'Справочная и тех. информация:';
+				}
+			}
+			&:nth-of-type(2){
+				margin-left: 30px;
+				&:before{
+					content: 'Преимущества  объекта:';
+				}
+			}
+			li{
+				font-family: 'Roboto Light';
+				margin-bottom: 10px;
+				position: relative;
+				padding-left: 15px;
+				max-width: 85%;
+				strong{
+					font-family: 'Roboto Condensed Bold';
+				}
+				&:first-child{
+
+				}
+				&:before{
+					position: absolute;
+					content: '';
+					top: 6px;
+					left: 0;
+					width: 7px;
+					height: 7px;
+					background: $red;
+				}
+			}
+		}
+		a{
+			display: block;
+			line-height: 50px;
+			margin: 50px auto 0;
+			cursor: pointer;
+			position: relative;
+			&:before{
+				position: absolute;
+				top: -35px;
+				left: 50%;
+				@include transform(translate(-50%,0));
+				content: '';
+				width: 800px;
+				height: 1px;
+				background: $grey;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.test{
+	background: $grey url('../img/test-default-bg.jpg') no-repeat center center;
+	-webkit-background-size:cover;
+	background-size:cover;
+	padding: 50px 0;
+	&--title{
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		font-family: 'Roboto Condensed Bold';
+		font-size: 36px;
+		margin-bottom: 60px;
+	}
+	&--wrapper{
+		background: $white;
+		height: 360px;
+		margin-bottom: 20px;
+		&--head{
+			height: 60px;
+			background: $grey url('../img/test-head-gradient-bg.jpg') repeat-x top;
+		}
+	}
+	&--buildings{
+		width: 95%;
+		margin: 0 auto;
+		&--item{
+			display: inline-block;
+			margin-right: 9px;
+			cursor: pointer;
+			.building{
+				font-size: 95px;
+				color: $white;
+				&:before{
+					margin: 0;
+				}
+			}
+			&:last-of-type{
+				margin-right: 0;
+			}
+			&.js-false{
+				opacity: 0.4;
+			}
+		}
+	}
+}

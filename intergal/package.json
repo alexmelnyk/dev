@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Вы хотите приобрести квартиру в Киеве или же возможен вариант покупки в пригороде столицы?",
+    "answers": ["Только в Киеве", "Пригород возможен"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [true, true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [false,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [true,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Год ввода объекта в эксплуатацию?",
+    "answers": ["2017", "2018"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [false,true]
+      },
+      {
+        "id": 2,
+        "key": [true,true]
+      },
+      {
+        "id": 3,
+        "key": [true,false]
+      },
+      {
+        "id": 4,
+        "key": [true,false]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [true,true]
+      },
+      {
+        "id": 7,
+        "key": [true,false]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Важно ли для вас наличие программ рассрочки от застройщика?",
+    "answers": ["Да", "Не обязательно"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [false,true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [true,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [true,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "До ближайшей станции метро должно быть не более 10-15 минут пешком?",
+    "answers": ["Да, конечно", "Было бы хорошо, но не обязательно"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [false,true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [false,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [false,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [false,true]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Важно ли расположение недалеко от парков или зеленых зон?",
+    "answers": ["Да, конечно", "Не обязательно"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [true, true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [true,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [false,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Детские сады и школы неподалеку – приоритет для вас?",
+    "answers": ["Да", "Нет"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [true, true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [true,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [true,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Вам важно наличие паркинга на територии ЖК?",
+    "answers": ["Да", "Не обязательно"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [false,true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [true,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [false,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "bgUrl": "./img/test-default-bg.jpg",
+    "iconName": "auto",
+    "question": "Наличие супермаркетов и торговых центров поблизости приоритет для вас?",
+    "answers": ["Да", "Не принципиально"],
+    "ansKey": [
+      {
+        "id": 1,
+        "key": [true, true]
+      },
+      {
+        "id": 2,
+        "key": [true,true]
+      },
+      {
+        "id": 3,
+        "key": [true,true]
+      },
+      {
+        "id": 4,
+        "key": [true,true]
+      },
+      {
+        "id": 5,
+        "key": [true,true]
+      },
+      {
+        "id": 6,
+        "key": [true,true]
+      },
+      {
+        "id": 7,
+        "key": [true,true]
+      },
+      {
+        "id": 8,
+        "key": [true,true]
+      },
+      {
+        "id": 9,
+        "key": [true,true]
+      }
+    ]
+  }
+]

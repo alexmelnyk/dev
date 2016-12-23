@@ -1,0 +1,2152 @@
+@charset "UTF-8";
+/* line 51, ../scss/layout/_base.scss */
+body,
+html {
+  height: 100%;
+}
+
+/* line 56, ../scss/layout/_base.scss */
+p,
+a,
+h1,
+h2,
+h3,
+button {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, ../scss/layout/_base.scss */
+li {
+  font-size: 16px;
+  font-family: 'Roboto Light';
+  list-style: none;
+  text-align: left;
+}
+
+/* line 74, ../scss/layout/_base.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 79, ../scss/layout/_base.scss */
+div,
+section {
+  font-size: 0;
+}
+
+/* line 84, ../scss/layout/_base.scss */
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 89, ../scss/layout/_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 93, ../scss/layout/_base.scss */
+.button {
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  width: 300px;
+  height: 50px;
+  font-family: 'Roboto Condensed Bold';
+  font-size: 18px;
+  -moz-transition: all, 0.3s, ease;
+  -o-transition: all, 0.3s, ease;
+  -webkit-transition: all, 0.3s, ease;
+  transition: all, 0.3s, ease;
+}
+/* line 102, ../scss/layout/_base.scss */
+.button.white {
+  border: 2px solid #fff;
+}
+/* line 105, ../scss/layout/_base.scss */
+.button.red {
+  border: 2px solid #d6462b;
+}
+/* line 108, ../scss/layout/_base.scss */
+.button.filled-red {
+  background: #d6462b;
+}
+/* line 111, ../scss/layout/_base.scss */
+.button:hover {
+  background: #d6462b;
+  border: 2px solid #d6462b;
+  box-shadow: inset 0px 0px 0px 2px #fff;
+  -webkit-box-shadow: inset 0px 0px 0px 2px #fff;
+  -moz-box-shadow: inset 0px 0px 0px 2px #fff;
+  -o-box-shadow: inset 0px 0px 0px 2px #fff;
+}
+/* line 116, ../scss/layout/_base.scss */
+.button:focus {
+  outline: none;
+}
+
+/* line 121, ../scss/layout/_base.scss */
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+/* line 127, ../scss/layout/_base.scss */
+.input:focus, .input:hover, .input:active {
+  border: none;
+  outline: none;
+}
+
+/* line 135, ../scss/layout/_base.scss */
+.float-left {
+  float: left;
+}
+
+/* line 138, ../scss/layout/_base.scss */
+.float-right {
+  float: right;
+}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../scss/layout/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, ../scss/layout/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, ../scss/layout/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, ../scss/layout/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, ../scss/layout/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 77, ../scss/layout/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, ../scss/layout/_normalize.scss */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 97, ../scss/layout/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 109, ../scss/layout/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 117, ../scss/layout/_normalize.scss */
+b,
+strong {
+  font-weight: normal;
+  font-family: 'Museo 700';
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, ../scss/layout/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 137, ../scss/layout/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 146, ../scss/layout/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 154, ../scss/layout/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 162, ../scss/layout/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 166, ../scss/layout/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 177, ../scss/layout/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 185, ../scss/layout/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 196, ../scss/layout/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 204, ../scss/layout/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 214, ../scss/layout/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 222, ../scss/layout/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 245, ../scss/layout/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 259, ../scss/layout/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 272, ../scss/layout/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 284, ../scss/layout/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 293, ../scss/layout/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 304, ../scss/layout/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 316, ../scss/layout/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 328, ../scss/layout/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 339, ../scss/layout/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 352, ../scss/layout/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 361, ../scss/layout/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 372, ../scss/layout/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 381, ../scss/layout/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 390, ../scss/layout/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 401, ../scss/layout/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 406, ../scss/layout/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 19, ../scss/layout/_grid.scss */
+.clearfix:after, .container:after, .row:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+/* line 30, ../scss/layout/_grid.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 960px;
+}
+@media (min-width: 1240px) {
+  /* line 30, ../scss/layout/_grid.scss */
+  .container {
+    width: 1140px;
+  }
+}
+
+/* line 57, ../scss/layout/_grid.scss */
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* line 64, ../scss/layout/_grid.scss */
+[class^="col-"],
+[class*=" col-"] {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-1 {
+  width: 8.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-2 {
+  width: 16.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-3 {
+  width: 25%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-4 {
+  width: 33.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-5 {
+  width: 41.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-6 {
+  width: 50%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-7 {
+  width: 58.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-8 {
+  width: 66.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-9 {
+  width: 75%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-10 {
+  width: 83.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-11 {
+  width: 91.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-lg-12 {
+  width: 100%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-1 {
+  width: 8.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-2 {
+  width: 16.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-3 {
+  width: 25%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-4 {
+  width: 33.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-5 {
+  width: 41.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-6 {
+  width: 50%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-7 {
+  width: 58.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-8 {
+  width: 66.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-9 {
+  width: 75%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-10 {
+  width: 83.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-11 {
+  width: 91.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-md-12 {
+  width: 100%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-1 {
+  width: 8.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-2 {
+  width: 16.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-3 {
+  width: 25%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-4 {
+  width: 33.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-5 {
+  width: 41.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-6 {
+  width: 50%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-7 {
+  width: 58.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-8 {
+  width: 66.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-9 {
+  width: 75%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-10 {
+  width: 83.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-11 {
+  width: 91.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-sm-12 {
+  width: 100%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-1 {
+  width: 8.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-2 {
+  width: 16.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-3 {
+  width: 25%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-4 {
+  width: 33.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-5 {
+  width: 41.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-6 {
+  width: 50%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-7 {
+  width: 58.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-8 {
+  width: 66.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-9 {
+  width: 75%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-10 {
+  width: 83.33333%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-11 {
+  width: 91.66667%;
+}
+
+/* line 76, ../scss/layout/_grid.scss */
+.col-xs-12 {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-1 {
+    width: 8.33333%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-2 {
+    width: 16.66667%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-3 {
+    width: 25%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-4 {
+    width: 33.33333%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-5 {
+    width: 41.66667%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-6 {
+    width: 50%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-7 {
+    width: 58.33333%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-8 {
+    width: 66.66667%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-9 {
+    width: 75%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-10 {
+    width: 83.33333%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-11 {
+    width: 91.66667%;
+  }
+
+  /* line 84, ../scss/layout/_grid.scss */
+  .col-md-12 {
+    width: 100%;
+  }
+}
+@media (min-width: 1240px) {
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-1 {
+    width: 8.33333%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-2 {
+    width: 16.66667%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-4 {
+    width: 33.33333%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-5 {
+    width: 41.66667%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-7 {
+    width: 58.33333%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-10 {
+    width: 83.33333%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-11 {
+    width: 91.66667%;
+  }
+
+  /* line 92, ../scss/layout/_grid.scss */
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-1 {
+  margin-left: 8.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-4 {
+  margin-left: 33.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-5 {
+  margin-left: 41.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-7 {
+  margin-left: 58.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-8 {
+  margin-left: 66.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-10 {
+  margin-left: 83.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-11 {
+  margin-left: 91.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-lg-offset-12 {
+  margin-left: 100%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-1 {
+  margin-left: 8.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-4 {
+  margin-left: 33.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-5 {
+  margin-left: 41.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-7 {
+  margin-left: 58.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-8 {
+  margin-left: 66.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-10 {
+  margin-left: 83.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-11 {
+  margin-left: 91.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-md-offset-12 {
+  margin-left: 100%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-1 {
+  margin-left: 8.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-4 {
+  margin-left: 33.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-5 {
+  margin-left: 41.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-7 {
+  margin-left: 58.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-8 {
+  margin-left: 66.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-10 {
+  margin-left: 83.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-11 {
+  margin-left: 91.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-sm-offset-12 {
+  margin-left: 100%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-1 {
+  margin-left: 8.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-2 {
+  margin-left: 16.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-3 {
+  margin-left: 25%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-4 {
+  margin-left: 33.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-5 {
+  margin-left: 41.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-6 {
+  margin-left: 50%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-7 {
+  margin-left: 58.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-8 {
+  margin-left: 66.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-10 {
+  margin-left: 83.33333%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-11 {
+  margin-left: 91.66667%;
+}
+
+/* line 101, ../scss/layout/_grid.scss */
+.col-xs-offset-12 {
+  margin-left: 100%;
+}
+
+@media (min-width: 992px) {
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 109, ../scss/layout/_grid.scss */
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (min-width: 1240px) {
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 117, ../scss/layout/_grid.scss */
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 125, ../scss/layout/_grid.scss */
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 131, ../scss/layout/_grid.scss */
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1239px) {
+  /* line 137, ../scss/layout/_grid.scss */
+  .hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1240px) {
+  /* line 143, ../scss/layout/_grid.scss */
+  .hidden-lg {
+    display: none !important;
+  }
+}
+@font-face {
+  font-family: 'Roboto Condensed Bold';
+  src: url("../fonts/RobotoCondensed-Bold.ttf"), url("../fonts/RobotoCondensed-Bold.otf"), url("../fonts/RobotoCondensed-Bold.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Black';
+  src: url("../fonts/Roboto-Black.ttf"), url("../fonts/Roboto-Black.otf"), url("../fonts/Roboto-Black.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url("../fonts/Roboto-Regular.ttf"), url("../fonts/Roboto-Regular.ttf"), url("../fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Light';
+  src: url("../fonts/Roboto-Light.ttf"), url("../fonts/Roboto-Light.ttf"), url("../fonts/Roboto-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url("../fonts/Roboto-Thin.ttf"), url("../fonts/Roboto-Thin.ttf"), url("../fonts/Roboto-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url("../fonts/Roboto-Bold.ttf"), url("../fonts/Roboto-Bold.ttf"), url("../fonts/Roboto-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 3, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item {
+  height: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 8, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #7d7d7d;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 19, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 75%;
+  height: 2px;
+  background: #7d7d7d;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -moz-transition: all, 0.3s, ease;
+  -o-transition: all, 0.3s, ease;
+  -webkit-transition: all, 0.3s, ease;
+  transition: all, 0.3s, ease;
+}
+/* line 30, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item--index {
+  color: #7d7d7d;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  font-size: 12px;
+  z-index: 1;
+}
+/* line 39, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item--icon {
+  color: #d6462b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 0px;
+  -moz-transition: all, 0.3s, ease;
+  -o-transition: all, 0.3s, ease;
+  -webkit-transition: all, 0.3s, ease;
+  transition: all, 0.3s, ease;
+}
+/* line 49, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item--bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: none;
+}
+/* line 58, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item--bg:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+/* line 71, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:hover .js-head-item--icon, .js-test .js-test-head .js-head-item.active .js-head-item--icon {
+  font-size: 40px;
+}
+/* line 74, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:hover:before, .js-test .js-test-head .js-head-item.active:before {
+  display: none;
+}
+/* line 77, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:hover:after, .js-test .js-test-head .js-head-item.active:after {
+  background: #d6462b;
+  height: 5px;
+}
+/* line 81, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item:hover .js-head-item--index, .js-test .js-test-head .js-head-item.active .js-head-item--index {
+  color: #000;
+}
+/* line 86, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item.complete .js-head-item--icon {
+  color: #fff;
+  font-size: 40px;
+  opacity: 0.5;
+}
+/* line 91, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item.complete .js-head-item--bg {
+  display: block;
+}
+/* line 94, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item.complete:after {
+  background: #d6462b;
+}
+/* line 98, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item.complete:hover .js-head-item--icon {
+  opacity: 1;
+}
+/* line 102, ../scss/_test.scss */
+.js-test .js-test-head .js-head-item.complete:hover .js-head-item--bg:after {
+  opacity: 1;
+}
+/* line 110, ../scss/_test.scss */
+.js-test .test--wrapper--body {
+  margin: 40px 90px 30px;
+}
+/* line 112, ../scss/_test.scss */
+.js-test .test--wrapper--body--under {
+  margin-top: 40px;
+  border-top: 1px solid #7d7d7d;
+  padding-top: 25px;
+}
+/* line 116, ../scss/_test.scss */
+.js-test .test--wrapper--body--under button {
+  font-size: 16px;
+}
+/* line 119, ../scss/_test.scss */
+.js-test .test--wrapper--body--under .button.prev-button {
+  color: #d6462b;
+  width: auto;
+  height: auto;
+  float: left;
+}
+/* line 124, ../scss/_test.scss */
+.js-test .test--wrapper--body--under .button.prev-button:hover {
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+}
+/* line 131, ../scss/_test.scss */
+.js-test .test--wrapper--body--under .button.next-button {
+  color: #fff;
+  float: right;
+  width: 140px;
+  height: 30px;
+}
+/* line 140, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item {
+  font-family: 'Roboto Light';
+  display: none;
+}
+/* line 143, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item--question {
+  font-size: 24px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+/* line 148, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  text-align: center;
+}
+/* line 153, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap label,
+.js-test .js-test-body .js-body-item .js-input-item-wrap input {
+  display: block;
+}
+/* line 157, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap label {
+  font-size: 18px;
+}
+/* line 159, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap label:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 4px solid #d6462b;
+  margin: 0 auto 10px;
+  cursor: pointer;
+}
+/* line 170, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap input {
+  margin: 0 auto;
+  display: none;
+}
+/* line 174, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item .js-input-item-wrap input:checked ~ label:before {
+  background: #d6462b;
+  -webkit-box-shadow: inset 0px 0px 0px 4px white;
+  -moz-box-shadow: inset 0px 0px 0px 4px white;
+  box-shadow: inset 0px 0px 0px 4px white;
+}
+/* line 181, ../scss/_test.scss */
+.js-test .js-test-body .js-body-item.active {
+  display: block;
+}
+
+@font-face {
+  font-family: 'cc-icons';
+  src: url("../fonts/cc-icons.eot?69283519");
+  src: url("../fonts/cc-icons.eot?69283519#iefix") format("embedded-opentype"), url("../fonts/cc-icons.woff2?69283519") format("woff2"), url("../fonts/cc-icons.woff?69283519") format("woff"), url("../fonts/cc-icons.ttf?69283519") format("truetype"), url("../fonts/cc-icons.svg?69283519#cc-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'cc-icons';
+    src: url('../font/cc-icons.svg?69283519#cc-icons') format('svg');
+  }
+}
+*/
+/* line 23, ../scss/_fontello.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "cc-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 58, ../scss/_fontello.scss */
+.icon-1:before {
+  content: '\e800';
+}
+
+/* '' */
+/* line 59, ../scss/_fontello.scss */
+.icon-2:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 60, ../scss/_fontello.scss */
+.icon-3:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 61, ../scss/_fontello.scss */
+.icon-4:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 62, ../scss/_fontello.scss */
+.icon-5:before {
+  content: '\e804';
+}
+
+/* '' */
+/* line 63, ../scss/_fontello.scss */
+.icon-6:before {
+  content: '\e805';
+}
+
+/* '' */
+/* line 64, ../scss/_fontello.scss */
+.icon-7:before {
+  content: '\e806';
+}
+
+/* '' */
+/* line 65, ../scss/_fontello.scss */
+.icon-8:before {
+  content: '\e807';
+}
+
+/* '' */
+/* line 66, ../scss/_fontello.scss */
+.icon-9:before {
+  content: '\e808';
+}
+
+/* '' */
+/* line 67, ../scss/_fontello.scss */
+.icon-auto:before {
+  content: '\e809';
+}
+
+/* '' */
+/* line 12, ../scss/main.scss */
+.top-section {
+  background: url("../img/top-section-bg.jpg") no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  min-height: 730px;
+  position: relative;
+  /*-webkit-clip-path: polygon(0% 0%, 20% 10px, 40% 25px, 60% 25px, 80% 10px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 20% 10px, 40% 20px, 60% 20px, 80% 10px, 100% 0, 100% 100%, 0 100%);*/
+  /*&:after{
+  	position: absolute;
+  	content: '';
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	-webkit-clip-path: ellipse(50% 6% at 50% 94%);
+  	clip-path: ellipse(50% 6% at 50% 94%);
+  	background-color: #fff;
+  }*/
+}
+/* line 21, ../scss/main.scss */
+.top-section .menu-section {
+  background: #e1e1e1;
+  padding: 15px 0;
+}
+/* line 24, ../scss/main.scss */
+.top-section .menu-section p {
+  font-family: 'Roboto Bold';
+}
+/* line 27, ../scss/main.scss */
+.top-section .menu-section .img-wrapper {
+  height: 100%;
+}
+/* line 42, ../scss/main.scss */
+.top-section .nav {
+  padding: 30px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 99999999;
+}
+/* line 47, ../scss/main.scss */
+.top-section .nav ul.menu {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 7px;
+  text-align: justify;
+  position: relative;
+}
+/* line 52, ../scss/main.scss */
+.top-section .nav ul.menu .js-hover-div {
+  position: absolute;
+  height: 4px;
+  background: #d6462b;
+  top: 22px;
+  left: 0;
+}
+/* line 60, ../scss/main.scss */
+.top-section .nav ul.menu li {
+  display: inline-block;
+  padding: 0;
+}
+/* line 63, ../scss/main.scss */
+.top-section .nav ul.menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Roboto Condensed Bold';
+  text-transform: uppercase;
+}
+/* line 70, ../scss/main.scss */
+.top-section .nav ul.menu:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 76, ../scss/main.scss */
+.top-section .nav.js-sticky {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -moz-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+/* line 85, ../scss/main.scss */
+.top-section .top-description {
+  position: relative;
+  margin-bottom: 30px;
+  padding-top: 140px;
+}
+/* line 89, ../scss/main.scss */
+.top-section .top-description--inner {
+  position: relative;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 80px 100px;
+}
+/* line 95, ../scss/main.scss */
+.top-section .top-description--inner p {
+  color: #fff;
+  font-family: 'Roboto Regular';
+  line-height: 1.8em;
+  text-align: center;
+}
+/* line 101, ../scss/main.scss */
+.top-section .top-description--inner--img {
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+/* line 106, ../scss/main.scss */
+.top-section .top-description--inner--img:after, .top-section .top-description--inner--img:before {
+  content: '';
+  width: 280px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+}
+/* line 115, ../scss/main.scss */
+.top-section .top-description--inner--img:after {
+  left: 110%;
+}
+/* line 118, ../scss/main.scss */
+.top-section .top-description--inner--img:before {
+  right: 110%;
+}
+/* line 124, ../scss/main.scss */
+.top-section .top-description-under {
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Condensed Bold';
+}
+/* line 128, ../scss/main.scss */
+.top-section .top-description-under h1 {
+  text-transform: uppercase;
+  font-size: 36px;
+}
+/* line 132, ../scss/main.scss */
+.top-section .top-description-under h3 {
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+
+/* line 139, ../scss/main.scss */
+.top-section-under {
+  padding: 50px 0;
+}
+/* line 141, ../scss/main.scss */
+.top-section-under h2 {
+  position: relative;
+  color: #d6462b;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 43px;
+  font-family: 'Roboto Condensed Bold';
+  display: block;
+  border-bottom: 1px solid #7d7d7d;
+  padding-bottom: 30px;
+}
+/* line 151, ../scss/main.scss */
+.top-section-under h2:after {
+  position: absolute;
+  content: '';
+  background: #fff url("../img/intergal-logo-grey.png") no-repeat center center;
+  width: 140px;
+  height: 35px;
+  top: 78%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* line 164, ../scss/main.scss */
+.contacts {
+  background: #e1e1e1 url("../img/contacts-bg.jpg") no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 60px 0;
+}
+/* line 169, ../scss/main.scss */
+.contacts h3 {
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed Bold';
+  font-size: 38px;
+  display: block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 45px;
+}
+/* line 180, ../scss/main.scss */
+.contacts--left ul li {
+  margin-bottom: 15px;
+}
+/* line 182, ../scss/main.scss */
+.contacts--left ul li p {
+  font-family: 'Roboto Regular';
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 187, ../scss/main.scss */
+.contacts--left ul li p:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  width: 19px;
+  height: 27px;
+  background: url("../img/contacts-sprite.png") no-repeat;
+  margin-right: 15px;
+}
+/* line 199, ../scss/main.scss */
+.contacts--left ul li:last-child p:before {
+  background-position: 0 110%;
+}
+/* line 210, ../scss/main.scss */
+.contacts--right form .input {
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  padding-left: 20px;
+  font-family: 'Roboto Regular';
+}
+/* line 215, ../scss/main.scss */
+.contacts--right form .input[type='email'] {
+  height: 40px;
+}
+/* line 218, ../scss/main.scss */
+.contacts--right form .input[type='text'] {
+  height: 150px;
+  padding-top: 10px;
+}
+/* line 223, ../scss/main.scss */
+.contacts--right form .button {
+  width: 100%;
+  color: #d6462b;
+}
+/* line 226, ../scss/main.scss */
+.contacts--right form .button:hover {
+  color: #fff;
+}
+
+/* line 234, ../scss/main.scss */
+.footer {
+  background: #e1e1e1;
+  font-family: 'Roboto Regular';
+  padding: 45px 0;
+}
+/* line 238, ../scss/main.scss */
+.footer p {
+  font-size: 13px;
+}
+/* line 241, ../scss/main.scss */
+.footer ul.footer--nav {
+  width: 100%;
+}
+/* line 244, ../scss/main.scss */
+.footer--nav {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 247, ../scss/main.scss */
+.footer--nav a {
+  color: #000;
+  font-size: 13px;
+}
+/* line 250, ../scss/main.scss */
+.footer--nav a:not(:last-child):after {
+  content: ',';
+  margin-right: 2px;
+  display: inline-block;
+}
+
+/* line 259, ../scss/main.scss */
+.objects {
+  padding: 50px 0;
+}
+/* line 261, ../scss/main.scss */
+.objects--object {
+  text-align: center;
+}
+/* line 263, ../scss/main.scss */
+.objects--object--thumbnail {
+  margin-bottom: 20px;
+}
+/* line 266, ../scss/main.scss */
+.objects--object--title {
+  font-size: 30px;
+  font-family: 'Roboto Thin';
+  margin-bottom: 5px;
+}
+/* line 271, ../scss/main.scss */
+.objects--object--tel {
+  font-family: 'Roboto Bold';
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-size: 21px;
+  position: relative;
+}
+/* line 277, ../scss/main.scss */
+.objects--object--tel:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 19px;
+  height: 20px;
+  background: url("../img/contacts-sprite.png") no-repeat center bottom;
+  margin-right: 5px;
+}
+/* line 286, ../scss/main.scss */
+.objects--object--tel:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #7d7d7d;
+  bottom: 0;
+  left: 0;
+}
+/* line 296, ../scss/main.scss */
+.objects--object p:not(.objects--object--tel) {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto 20px;
+  font-size: 16px;
+  font-family: 'Roboto Light';
+}
+/* line 303, ../scss/main.scss */
+.objects--object img:not(.objects--object--thumbnail) {
+  margin-bottom: 40px;
+}
+/* line 306, ../scss/main.scss */
+.objects--object ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+}
+/* line 310, ../scss/main.scss */
+.objects--object ul:before {
+  display: block;
+  font-size: 21px;
+  font-family: 'Roboto Light';
+  text-align: left;
+  max-width: 230px;
+  margin-bottom: 20px;
+}
+/* line 318, ../scss/main.scss */
+.objects--object ul:nth-of-type(1) {
+  margin-right: 30px;
+}
+/* line 320, ../scss/main.scss */
+.objects--object ul:nth-of-type(1):before {
+  content: 'Справочная и тех. информация:';
+}
+/* line 324, ../scss/main.scss */
+.objects--object ul:nth-of-type(2) {
+  margin-left: 30px;
+}
+/* line 326, ../scss/main.scss */
+.objects--object ul:nth-of-type(2):before {
+  content: 'Преимущества  объекта:';
+}
+/* line 330, ../scss/main.scss */
+.objects--object ul li {
+  font-family: 'Roboto Light';
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+  max-width: 85%;
+}
+/* line 336, ../scss/main.scss */
+.objects--object ul li strong {
+  font-family: 'Roboto Condensed Bold';
+}
+/* line 342, ../scss/main.scss */
+.objects--object ul li:before {
+  position: absolute;
+  content: '';
+  top: 6px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  background: #d6462b;
+}
+/* line 353, ../scss/main.scss */
+.objects--object a {
+  display: block;
+  line-height: 50px;
+  margin: 50px auto 0;
+  cursor: pointer;
+  position: relative;
+}
+/* line 359, ../scss/main.scss */
+.objects--object a:before {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  content: '';
+  width: 800px;
+  height: 1px;
+  background: #7d7d7d;
+  margin-bottom: 20px;
+}
+
+/* line 374, ../scss/main.scss */
+.test {
+  background: #7d7d7d url("../img/test-default-bg.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 50px 0;
+}
+/* line 379, ../scss/main.scss */
+.test--title {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed Bold';
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+/* line 387, ../scss/main.scss */
+.test--wrapper {
+  background: #fff;
+  height: 360px;
+  margin-bottom: 20px;
+}
+/* line 391, ../scss/main.scss */
+.test--wrapper--head {
+  height: 60px;
+  background: #7d7d7d url("../img/test-head-gradient-bg.jpg") repeat-x top;
+}
+/* line 396, ../scss/main.scss */
+.test--buildings {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 399, ../scss/main.scss */
+.test--buildings--item {
+  display: inline-block;
+  margin-right: 9px;
+  cursor: pointer;
+}
+/* line 403, ../scss/main.scss */
+.test--buildings--item .building {
+  font-size: 95px;
+  color: #fff;
+}
+/* line 406, ../scss/main.scss */
+.test--buildings--item .building:before {
+  margin: 0;
+}
+/* line 410, ../scss/main.scss */
+.test--buildings--item:last-of-type {
+  margin-right: 0;
+}
+/* line 413, ../scss/main.scss */
+.test--buildings--item.js-false {
+  opacity: 0.4;
+}
