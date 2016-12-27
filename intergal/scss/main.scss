@@ -5,6 +5,7 @@
 @import 'layout/fonts';
 
 @import 'test';
+@import 'jquery.bxslider';
 @import 'fontello';
 
 @charset "utf-8";
@@ -261,7 +262,7 @@
 	&--object{
 		text-align: center;
 		&--thumbnail{
-			margin-bottom: 20px;
+			margin:0 auto 20px;
 		}
 		&--title{
 			font-size: 30px;
@@ -376,6 +377,7 @@
 	-webkit-background-size:cover;
 	background-size:cover;
 	padding: 50px 0;
+	text-align: center;
 	&--title{
 		text-align: center;
 		color: $white;
@@ -383,6 +385,11 @@
 		font-family: 'Roboto Condensed Bold';
 		font-size: 36px;
 		margin-bottom: 60px;
+	}
+	.js-repeat{
+		color: $white;
+		margin: 0 auto 20px;
+		display: none;
 	}
 	&--wrapper{
 		background: $white;
@@ -394,8 +401,8 @@
 		}
 	}
 	&--buildings{
-		width: 95%;
 		margin: 0 auto;
+		background: rgba(255,255,255,0);
 		&--item{
 			display: inline-block;
 			margin-right: 9px;
@@ -413,6 +420,146 @@
 			&.js-false{
 				opacity: 0.4;
 			}
+			.flipper{
+				.back{
+					height: 95px;
+					position: relative;
+					img{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						@include transform(translate(-50%,-50%));
+					}
+				}
+			}
 		}
 	}
+	&.complete{
+		padding-bottom: 0;
+		.test--buildings{
+			position: relative;
+			background: rgba(255,255,255,1);
+			transition-property: background;
+			transition-duration: 0.3s;
+			transition-timing-function: linear;
+			transition-delay: 0.5s;
+			padding: 35px 0 10px;
+			&--item{
+				position: relative;
+				z-index: 2;
+				&.js-false{
+					opacity: 1;
+					.flipper{
+						.back{
+							-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+							filter: grayscale(100%);
+							opacity: 0.2;
+						}
+					}
+				}
+				&:hover,
+				&.active{
+					&.js-false{
+						.flipper{
+							.back{
+								@include box-shadow( 2px 2px 8px 0px rgba(0,0,0,0.2));
+								opacity: 1;
+								-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+								filter: grayscale(0);
+							}
+						}
+					}
+					.flipper{
+						.back{
+							@include box-shadow( 2px 2px 8px 0px rgba(0,0,0,0.2));
+						}
+					}
+					&:after{
+						width: 0;
+						height: 0;
+						border-left: 10px solid transparent;
+						border-right: 10px solid transparent;
+						border-bottom: 10px solid $red;
+						content: '';
+						position: absolute;
+						top: 110%;
+						left: 50%;
+						@include transform(translate(-50%,0));
+					}
+				}
+				&.best{
+					&:before{
+						position: absolute;
+						content: '';
+						top: -25px;
+						left: 50%;
+						@include transform(translate(-50%,0));
+						width: 100px;
+						height: 54px;
+						background: url('../img/best-icon.png');
+						z-index:1;
+					}
+					&:hover,
+					&.active{
+						&:before{
+							background-position: 0 100%;
+						}
+					}
+				}
+			}
+			&:after{
+				position: absolute;
+				left: 50%;
+				top: 107%;
+				content: '';
+				width: 930px;
+				height: 4px;
+				background: $red;
+				@include transform(translate(-50%,0));
+			}
+		}
+	}
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 95px;
+	height: 95px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }

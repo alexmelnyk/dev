@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg1.jpg",
+    "iconName": "house",
     "question": "Вы хотите приобрести квартиру в Киеве или же возможен вариант покупки в пригороде столицы?",
     "answers": ["Только в Киеве", "Пригород возможен"],
     "ansKey": [
@@ -46,8 +46,8 @@
   },
   {
     "id": 2,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg2.jpg",
+    "iconName": "calendar",
     "question": "Год ввода объекта в эксплуатацию?",
     "answers": ["2017", "2018"],
     "ansKey": [
@@ -91,8 +91,8 @@
   },
   {
     "id": 3,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg8.jpg",
+    "iconName": "money",
     "question": "Важно ли для вас наличие программ рассрочки от застройщика?",
     "answers": ["Да", "Не обязательно"],
     "ansKey": [
@@ -136,8 +136,8 @@
   },
   {
     "id": 4,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg5.jpg",
+    "iconName": "metro",
     "question": "До ближайшей станции метро должно быть не более 10-15 минут пешком?",
     "answers": ["Да, конечно", "Было бы хорошо, но не обязательно"],
     "ansKey": [
@@ -181,8 +181,8 @@
   },
   {
     "id": 5,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg4.jpg",
+    "iconName": "tree",
     "question": "Важно ли расположение недалеко от парков или зеленых зон?",
     "answers": ["Да, конечно", "Не обязательно"],
     "ansKey": [
@@ -226,8 +226,8 @@
   },
   {
     "id": 6,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg6.jpg",
+    "iconName": "human",
     "question": "Детские сады и школы неподалеку – приоритет для вас?",
     "answers": ["Да", "Нет"],
     "ansKey": [
@@ -271,8 +271,8 @@
   },
   {
     "id": 7,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg1.jpg",
+    "iconName": "car",
     "question": "Вам важно наличие паркинга на територии ЖК?",
     "answers": ["Да", "Не обязательно"],
     "ansKey": [
@@ -316,8 +316,8 @@
   },
   {
     "id": 8,
-    "bgUrl": "./img/test-default-bg.jpg",
-    "iconName": "auto",
+    "bgUrl": "./img/tab_bg/tab-bg6.jpg",
+    "iconName": "cart",
     "question": "Наличие супермаркетов и торговых центров поблизости приоритет для вас?",
     "answers": ["Да", "Не принципиально"],
     "ansKey": [

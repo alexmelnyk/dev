@@ -1572,10 +1572,223 @@ th {
   display: block;
 }
 
-@font-face {
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+/** RESET AND LAYOUT
+===================================*/
+/* line 18, ../scss/_jquery.bxslider.scss */
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto 60px;
+  padding: 0;
+  *zoom: 1;
+}
+
+/* line 25, ../scss/_jquery.bxslider.scss */
+.bx-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+/** THEME
+===================================*/
+/* line 33, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-viewport {
+  height: auto !important;
+  /*fix other elements on the page moving (on Chrome)*/
+}
+
+/* line 38, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+/* LOADER */
+/* line 47, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url(../css/images/bx_loader.gif) center center no-repeat #fff;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+/* PAGER */
+/* line 60, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-pager {
+  text-align: center;
+  font-size: .85em;
+  font-family: Arial;
+  font-weight: bold;
+  color: #666;
+  padding-top: 20px;
+}
+
+/* line 69, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+/* line 76, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background: #666;
+  text-indent: -9999px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  outline: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 89, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+/* line 96, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-next {
+  text-decoration: none;
+}
+/* line 99, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-prev:before,
+.bx-wrapper .bx-next:before {
   font-family: 'cc-icons';
-  src: url("../fonts/cc-icons.eot?69283519");
-  src: url("../fonts/cc-icons.eot?69283519#iefix") format("embedded-opentype"), url("../fonts/cc-icons.woff2?69283519") format("woff2"), url("../fonts/cc-icons.woff?69283519") format("woff"), url("../fonts/cc-icons.ttf?69283519") format("truetype"), url("../fonts/cc-icons.svg?69283519#cc-icons") format("svg");
+  font-size: 40px;
+}
+/* line 108, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-prev {
+  left: -50px;
+}
+/* line 110, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-prev:before {
+  content: '\e803';
+}
+/* line 114, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-next {
+  right: -50px;
+}
+/* line 116, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-next:before {
+  content: '\e801';
+}
+
+/* line 122, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-direction a {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  outline: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 9999;
+}
+
+/* line 132, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+/* line 138, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-auto {
+  text-align: center;
+}
+
+/* line 142, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start {
+  display: block;
+  text-indent: -9999px;
+  width: 10px;
+  height: 11px;
+  outline: 0;
+  background: url(../css/images/controls.png) -86px -11px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 152, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+  background-position: -86px 0;
+}
+
+/* line 157, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop {
+  display: block;
+  text-indent: -9999px;
+  width: 9px;
+  height: 11px;
+  outline: 0;
+  background: url(../css/images/controls.png) -86px -44px no-repeat;
+  margin: 0 3px;
+}
+
+/* line 167, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+  background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+/* line 174, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+  text-align: left;
+  width: 80%;
+}
+
+/* line 179, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+  right: 0;
+  width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+/* line 186, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666 \9;
+  background: rgba(80, 80, 80, 0.75);
+  width: 100%;
+}
+
+/* line 195, ../scss/_jquery.bxslider.scss */
+.bx-wrapper .bx-caption span {
+  color: #fff;
+  font-family: Arial;
+  display: block;
+  font-size: .85em;
+  padding: 10px;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?36949391");
+  src: url("../fonts/fontello.eot?36949391#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?36949391") format("woff2"), url("../fonts/fontello.woff?36949391") format("woff"), url("../fonts/fontello.ttf?36949391") format("truetype"), url("../fonts/fontello.svg?36949391#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1584,14 +1797,14 @@ th {
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'cc-icons';
-    src: url('../font/cc-icons.svg?69283519#cc-icons') format('svg');
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?36949391#fontello') format('svg');
   }
 }
 */
 /* line 23, ../scss/_fontello.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "cc-icons";
+  font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -1619,66 +1832,108 @@ th {
 }
 
 /* line 58, ../scss/_fontello.scss */
-.icon-1:before {
+.icon-house:before {
   content: '\e800';
 }
 
 /* '' */
 /* line 59, ../scss/_fontello.scss */
-.icon-2:before {
+.icon-calendar:before {
   content: '\e801';
 }
 
 /* '' */
 /* line 60, ../scss/_fontello.scss */
-.icon-3:before {
+.icon-human:before {
   content: '\e802';
 }
 
 /* '' */
 /* line 61, ../scss/_fontello.scss */
-.icon-4:before {
+.icon-tree:before {
   content: '\e803';
 }
 
 /* '' */
 /* line 62, ../scss/_fontello.scss */
-.icon-5:before {
+.icon-metro:before {
   content: '\e804';
 }
 
 /* '' */
 /* line 63, ../scss/_fontello.scss */
-.icon-6:before {
+.icon-cart:before {
   content: '\e805';
 }
 
 /* '' */
 /* line 64, ../scss/_fontello.scss */
-.icon-7:before {
+.icon-car:before {
   content: '\e806';
 }
 
 /* '' */
 /* line 65, ../scss/_fontello.scss */
-.icon-8:before {
+.icon-money:before {
   content: '\e807';
 }
 
 /* '' */
 /* line 66, ../scss/_fontello.scss */
-.icon-9:before {
+.icon-1:before {
   content: '\e808';
 }
 
 /* '' */
 /* line 67, ../scss/_fontello.scss */
-.icon-auto:before {
+.icon-2:before {
   content: '\e809';
 }
 
 /* '' */
-/* line 12, ../scss/main.scss */
+/* line 68, ../scss/_fontello.scss */
+.icon-3:before {
+  content: '\e80a';
+}
+
+/* '' */
+/* line 69, ../scss/_fontello.scss */
+.icon-4:before {
+  content: '\e80b';
+}
+
+/* '' */
+/* line 70, ../scss/_fontello.scss */
+.icon-5:before {
+  content: '\e80c';
+}
+
+/* '' */
+/* line 71, ../scss/_fontello.scss */
+.icon-6:before {
+  content: '\e80d';
+}
+
+/* '' */
+/* line 72, ../scss/_fontello.scss */
+.icon-7:before {
+  content: '\e80e';
+}
+
+/* '' */
+/* line 73, ../scss/_fontello.scss */
+.icon-8:before {
+  content: '\e80f';
+}
+
+/* '' */
+/* line 74, ../scss/_fontello.scss */
+.icon-9:before {
+  content: '\e810';
+}
+
+/* '' */
+/* line 13, ../scss/main.scss */
 .top-section {
   background: url("../img/top-section-bg.jpg") no-repeat;
   -webkit-background-size: cover;
@@ -1700,34 +1955,34 @@ th {
   	background-color: #fff;
   }*/
 }
-/* line 21, ../scss/main.scss */
+/* line 22, ../scss/main.scss */
 .top-section .menu-section {
   background: #e1e1e1;
   padding: 15px 0;
 }
-/* line 24, ../scss/main.scss */
+/* line 25, ../scss/main.scss */
 .top-section .menu-section p {
   font-family: 'Roboto Bold';
 }
-/* line 27, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 .top-section .menu-section .img-wrapper {
   height: 100%;
 }
-/* line 42, ../scss/main.scss */
+/* line 43, ../scss/main.scss */
 .top-section .nav {
   padding: 30px 0;
   position: absolute;
   width: 100%;
   z-index: 99999999;
 }
-/* line 47, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 .top-section .nav ul.menu {
   border-bottom: 1px solid #fff;
   padding-bottom: 7px;
   text-align: justify;
   position: relative;
 }
-/* line 52, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 .top-section .nav ul.menu .js-hover-div {
   position: absolute;
   height: 4px;
@@ -1735,25 +1990,25 @@ th {
   top: 22px;
   left: 0;
 }
-/* line 60, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 .top-section .nav ul.menu li {
   display: inline-block;
   padding: 0;
 }
-/* line 63, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .top-section .nav ul.menu li a {
   color: #fff;
   font-size: 18px;
   font-family: 'Roboto Condensed Bold';
   text-transform: uppercase;
 }
-/* line 70, ../scss/main.scss */
+/* line 71, ../scss/main.scss */
 .top-section .nav ul.menu:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 76, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
 .top-section .nav.js-sticky {
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -1765,13 +2020,13 @@ th {
   -webkit-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
-/* line 85, ../scss/main.scss */
+/* line 86, ../scss/main.scss */
 .top-section .top-description {
   position: relative;
   margin-bottom: 30px;
   padding-top: 140px;
 }
-/* line 89, ../scss/main.scss */
+/* line 90, ../scss/main.scss */
 .top-section .top-description--inner {
   position: relative;
   border-left: 1px solid #fff;
@@ -1779,14 +2034,14 @@ th {
   border-bottom: 1px solid #fff;
   padding: 80px 100px;
 }
-/* line 95, ../scss/main.scss */
+/* line 96, ../scss/main.scss */
 .top-section .top-description--inner p {
   color: #fff;
   font-family: 'Roboto Regular';
   line-height: 1.8em;
   text-align: center;
 }
-/* line 101, ../scss/main.scss */
+/* line 102, ../scss/main.scss */
 .top-section .top-description--inner--img {
   position: absolute;
   top: -23px;
@@ -1796,7 +2051,7 @@ th {
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
-/* line 106, ../scss/main.scss */
+/* line 107, ../scss/main.scss */
 .top-section .top-description--inner--img:after, .top-section .top-description--inner--img:before {
   content: '';
   width: 280px;
@@ -1805,36 +2060,36 @@ th {
   position: absolute;
   top: 50%;
 }
-/* line 115, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
 .top-section .top-description--inner--img:after {
   left: 110%;
 }
-/* line 118, ../scss/main.scss */
+/* line 119, ../scss/main.scss */
 .top-section .top-description--inner--img:before {
   right: 110%;
 }
-/* line 124, ../scss/main.scss */
+/* line 125, ../scss/main.scss */
 .top-section .top-description-under {
   text-align: center;
   color: #fff;
   font-family: 'Roboto Condensed Bold';
 }
-/* line 128, ../scss/main.scss */
+/* line 129, ../scss/main.scss */
 .top-section .top-description-under h1 {
   text-transform: uppercase;
   font-size: 36px;
 }
-/* line 132, ../scss/main.scss */
+/* line 133, ../scss/main.scss */
 .top-section .top-description-under h3 {
   font-size: 21px;
   margin-bottom: 40px;
 }
 
-/* line 139, ../scss/main.scss */
+/* line 140, ../scss/main.scss */
 .top-section-under {
   padding: 50px 0;
 }
-/* line 141, ../scss/main.scss */
+/* line 142, ../scss/main.scss */
 .top-section-under h2 {
   position: relative;
   color: #d6462b;
@@ -1846,7 +2101,7 @@ th {
   border-bottom: 1px solid #7d7d7d;
   padding-bottom: 30px;
 }
-/* line 151, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 .top-section-under h2:after {
   position: absolute;
   content: '';
@@ -1861,14 +2116,14 @@ th {
   transform: translate(-50%, 0);
 }
 
-/* line 164, ../scss/main.scss */
+/* line 165, ../scss/main.scss */
 .contacts {
   background: #e1e1e1 url("../img/contacts-bg.jpg") no-repeat center top;
   -webkit-background-size: cover;
   background-size: cover;
   padding: 60px 0;
 }
-/* line 169, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 .contacts h3 {
   text-transform: uppercase;
   font-family: 'Roboto Condensed Bold';
@@ -1878,18 +2133,18 @@ th {
   padding-bottom: 5px;
   margin-bottom: 45px;
 }
-/* line 180, ../scss/main.scss */
+/* line 181, ../scss/main.scss */
 .contacts--left ul li {
   margin-bottom: 15px;
 }
-/* line 182, ../scss/main.scss */
+/* line 183, ../scss/main.scss */
 .contacts--left ul li p {
   font-family: 'Roboto Regular';
   font-size: 16px;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 187, ../scss/main.scss */
+/* line 188, ../scss/main.scss */
 .contacts--left ul li p:before {
   display: inline-block;
   vertical-align: middle;
@@ -1899,86 +2154,86 @@ th {
   background: url("../img/contacts-sprite.png") no-repeat;
   margin-right: 15px;
 }
-/* line 199, ../scss/main.scss */
+/* line 200, ../scss/main.scss */
 .contacts--left ul li:last-child p:before {
   background-position: 0 110%;
 }
-/* line 210, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .contacts--right form .input {
   margin-bottom: 20px;
   border: 1px solid #000;
   padding-left: 20px;
   font-family: 'Roboto Regular';
 }
-/* line 215, ../scss/main.scss */
+/* line 216, ../scss/main.scss */
 .contacts--right form .input[type='email'] {
   height: 40px;
 }
-/* line 218, ../scss/main.scss */
+/* line 219, ../scss/main.scss */
 .contacts--right form .input[type='text'] {
   height: 150px;
   padding-top: 10px;
 }
-/* line 223, ../scss/main.scss */
+/* line 224, ../scss/main.scss */
 .contacts--right form .button {
   width: 100%;
   color: #d6462b;
 }
-/* line 226, ../scss/main.scss */
+/* line 227, ../scss/main.scss */
 .contacts--right form .button:hover {
   color: #fff;
 }
 
-/* line 234, ../scss/main.scss */
+/* line 235, ../scss/main.scss */
 .footer {
   background: #e1e1e1;
   font-family: 'Roboto Regular';
   padding: 45px 0;
 }
-/* line 238, ../scss/main.scss */
+/* line 239, ../scss/main.scss */
 .footer p {
   font-size: 13px;
 }
-/* line 241, ../scss/main.scss */
+/* line 242, ../scss/main.scss */
 .footer ul.footer--nav {
   width: 100%;
 }
-/* line 244, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 .footer--nav {
   width: 80%;
   margin: 0 auto;
 }
-/* line 247, ../scss/main.scss */
+/* line 248, ../scss/main.scss */
 .footer--nav a {
   color: #000;
   font-size: 13px;
 }
-/* line 250, ../scss/main.scss */
+/* line 251, ../scss/main.scss */
 .footer--nav a:not(:last-child):after {
   content: ',';
   margin-right: 2px;
   display: inline-block;
 }
 
-/* line 259, ../scss/main.scss */
+/* line 260, ../scss/main.scss */
 .objects {
   padding: 50px 0;
 }
-/* line 261, ../scss/main.scss */
+/* line 262, ../scss/main.scss */
 .objects--object {
   text-align: center;
 }
-/* line 263, ../scss/main.scss */
+/* line 264, ../scss/main.scss */
 .objects--object--thumbnail {
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
-/* line 266, ../scss/main.scss */
+/* line 267, ../scss/main.scss */
 .objects--object--title {
   font-size: 30px;
   font-family: 'Roboto Thin';
   margin-bottom: 5px;
 }
-/* line 271, ../scss/main.scss */
+/* line 272, ../scss/main.scss */
 .objects--object--tel {
   font-family: 'Roboto Bold';
   margin-bottom: 30px;
@@ -1986,7 +2241,7 @@ th {
   font-size: 21px;
   position: relative;
 }
-/* line 277, ../scss/main.scss */
+/* line 278, ../scss/main.scss */
 .objects--object--tel:before {
   content: '';
   display: inline-block;
@@ -1996,7 +2251,7 @@ th {
   background: url("../img/contacts-sprite.png") no-repeat center bottom;
   margin-right: 5px;
 }
-/* line 286, ../scss/main.scss */
+/* line 287, ../scss/main.scss */
 .objects--object--tel:after {
   position: absolute;
   content: '';
@@ -2006,7 +2261,7 @@ th {
   bottom: 0;
   left: 0;
 }
-/* line 296, ../scss/main.scss */
+/* line 297, ../scss/main.scss */
 .objects--object p:not(.objects--object--tel) {
   text-align: left;
   width: 80%;
@@ -2014,17 +2269,17 @@ th {
   font-size: 16px;
   font-family: 'Roboto Light';
 }
-/* line 303, ../scss/main.scss */
+/* line 304, ../scss/main.scss */
 .objects--object img:not(.objects--object--thumbnail) {
   margin-bottom: 40px;
 }
-/* line 306, ../scss/main.scss */
+/* line 307, ../scss/main.scss */
 .objects--object ul {
   display: inline-block;
   vertical-align: top;
   width: 300px;
 }
-/* line 310, ../scss/main.scss */
+/* line 311, ../scss/main.scss */
 .objects--object ul:before {
   display: block;
   font-size: 21px;
@@ -2033,23 +2288,23 @@ th {
   max-width: 230px;
   margin-bottom: 20px;
 }
-/* line 318, ../scss/main.scss */
+/* line 319, ../scss/main.scss */
 .objects--object ul:nth-of-type(1) {
   margin-right: 30px;
 }
-/* line 320, ../scss/main.scss */
+/* line 321, ../scss/main.scss */
 .objects--object ul:nth-of-type(1):before {
   content: 'Справочная и тех. информация:';
 }
-/* line 324, ../scss/main.scss */
+/* line 325, ../scss/main.scss */
 .objects--object ul:nth-of-type(2) {
   margin-left: 30px;
 }
-/* line 326, ../scss/main.scss */
+/* line 327, ../scss/main.scss */
 .objects--object ul:nth-of-type(2):before {
   content: 'Преимущества  объекта:';
 }
-/* line 330, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .objects--object ul li {
   font-family: 'Roboto Light';
   margin-bottom: 10px;
@@ -2057,11 +2312,11 @@ th {
   padding-left: 15px;
   max-width: 85%;
 }
-/* line 336, ../scss/main.scss */
+/* line 337, ../scss/main.scss */
 .objects--object ul li strong {
   font-family: 'Roboto Condensed Bold';
 }
-/* line 342, ../scss/main.scss */
+/* line 343, ../scss/main.scss */
 .objects--object ul li:before {
   position: absolute;
   content: '';
@@ -2071,7 +2326,7 @@ th {
   height: 7px;
   background: #d6462b;
 }
-/* line 353, ../scss/main.scss */
+/* line 354, ../scss/main.scss */
 .objects--object a {
   display: block;
   line-height: 50px;
@@ -2079,7 +2334,7 @@ th {
   cursor: pointer;
   position: relative;
 }
-/* line 359, ../scss/main.scss */
+/* line 360, ../scss/main.scss */
 .objects--object a:before {
   position: absolute;
   top: -35px;
@@ -2095,14 +2350,15 @@ th {
   margin-bottom: 20px;
 }
 
-/* line 374, ../scss/main.scss */
+/* line 375, ../scss/main.scss */
 .test {
   background: #7d7d7d url("../img/test-default-bg.jpg") no-repeat center center;
   -webkit-background-size: cover;
   background-size: cover;
   padding: 50px 0;
+  text-align: center;
 }
-/* line 379, ../scss/main.scss */
+/* line 381, ../scss/main.scss */
 .test--title {
   text-align: center;
   color: #fff;
@@ -2111,42 +2367,209 @@ th {
   font-size: 36px;
   margin-bottom: 60px;
 }
-/* line 387, ../scss/main.scss */
+/* line 389, ../scss/main.scss */
+.test .js-repeat {
+  color: #fff;
+  margin: 0 auto 20px;
+  display: none;
+}
+/* line 394, ../scss/main.scss */
 .test--wrapper {
   background: #fff;
   height: 360px;
   margin-bottom: 20px;
 }
-/* line 391, ../scss/main.scss */
+/* line 398, ../scss/main.scss */
 .test--wrapper--head {
   height: 60px;
   background: #7d7d7d url("../img/test-head-gradient-bg.jpg") repeat-x top;
 }
-/* line 396, ../scss/main.scss */
+/* line 403, ../scss/main.scss */
 .test--buildings {
-  width: 95%;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0);
 }
-/* line 399, ../scss/main.scss */
+/* line 406, ../scss/main.scss */
 .test--buildings--item {
   display: inline-block;
   margin-right: 9px;
   cursor: pointer;
 }
-/* line 403, ../scss/main.scss */
+/* line 410, ../scss/main.scss */
 .test--buildings--item .building {
   font-size: 95px;
   color: #fff;
 }
-/* line 406, ../scss/main.scss */
+/* line 413, ../scss/main.scss */
 .test--buildings--item .building:before {
   margin: 0;
 }
-/* line 410, ../scss/main.scss */
+/* line 417, ../scss/main.scss */
 .test--buildings--item:last-of-type {
   margin-right: 0;
 }
-/* line 413, ../scss/main.scss */
+/* line 420, ../scss/main.scss */
 .test--buildings--item.js-false {
   opacity: 0.4;
+}
+/* line 424, ../scss/main.scss */
+.test--buildings--item .flipper .back {
+  height: 95px;
+  position: relative;
+}
+/* line 427, ../scss/main.scss */
+.test--buildings--item .flipper .back img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 437, ../scss/main.scss */
+.test.complete {
+  padding-bottom: 0;
+}
+/* line 439, ../scss/main.scss */
+.test.complete .test--buildings {
+  position: relative;
+  background: white;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0.5s;
+  padding: 35px 0 10px;
+}
+/* line 447, ../scss/main.scss */
+.test.complete .test--buildings--item {
+  position: relative;
+  z-index: 2;
+}
+/* line 450, ../scss/main.scss */
+.test.complete .test--buildings--item.js-false {
+  opacity: 1;
+}
+/* line 453, ../scss/main.scss */
+.test.complete .test--buildings--item.js-false .flipper .back {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+/* line 464, ../scss/main.scss */
+.test.complete .test--buildings--item:hover.js-false .flipper .back, .test.complete .test--buildings--item.active.js-false .flipper .back {
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(0);
+}
+/* line 473, ../scss/main.scss */
+.test.complete .test--buildings--item:hover .flipper .back, .test.complete .test--buildings--item.active .flipper .back {
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.2);
+}
+/* line 477, ../scss/main.scss */
+.test.complete .test--buildings--item:hover:after, .test.complete .test--buildings--item.active:after {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #d6462b;
+  content: '';
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+/* line 491, ../scss/main.scss */
+.test.complete .test--buildings--item.best:before {
+  position: absolute;
+  content: '';
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 100px;
+  height: 54px;
+  background: url("../img/best-icon.png");
+  z-index: 1;
+}
+/* line 504, ../scss/main.scss */
+.test.complete .test--buildings--item.best:hover:before, .test.complete .test--buildings--item.best.active:before {
+  background-position: 0 100%;
+}
+/* line 510, ../scss/main.scss */
+.test.complete .test--buildings:after {
+  position: absolute;
+  left: 50%;
+  top: 107%;
+  content: '';
+  width: 930px;
+  height: 4px;
+  background: #d6462b;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+/* entire container, keeps perspective */
+/* line 525, ../scss/main.scss */
+.flip-container {
+  perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+/* line 529, ../scss/main.scss */
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+/* line 533, ../scss/main.scss */
+.flip-container, .front, .back {
+  width: 95px;
+  height: 95px;
+}
+
+/* flip speed goes here */
+/* line 539, ../scss/main.scss */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+/* line 547, ../scss/main.scss */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+/* line 556, ../scss/main.scss */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+/* line 563, ../scss/main.scss */
+.back {
+  transform: rotateY(180deg);
 }

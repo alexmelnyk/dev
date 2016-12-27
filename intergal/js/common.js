@@ -208,10 +208,92 @@ var myTest = (function(){
             var parentHead = $('.js-test-head', scope),
                 parentBody = $('.js-test-body', scope),
                 headItem = parentHead.find('.js-head-item'),
-                bodyItem = parentBody.find('.js-body-item');
+                bodyItem = parentBody.find('.js-body-item'),
+                nextButton = $('.next-button', scope),
+                prevButton = $('.prev-button', scope);
+
+            var setActiveElems = function(){
+                headItem.removeClass('next').removeClass('prev');
+                bodyItem.removeClass('next').removeClass('prev');
+
+                parentHead.find('.active').prev().addClass('prev');
+                parentBody.find('.active').prev().addClass('prev');
+
+                if (parentHead.find('.active').next().length == 0){
+                    headItem.not('.complete').first().addClass('next');
+                } else {
+                    parentHead.find('.active').next().addClass('next');
+                }
+
+                if (parentBody.find('.active').next().length == 0){
+                    bodyItem.not('.complete').first().addClass('next');
+                } else {
+                    parentBody.find('.active').next().addClass('next');
+                }
+
+            };
 
             headItem.eq(0).addClass('active');
             bodyItem.eq(0).addClass('active');
+
+            headItem.eq(1).addClass('next');
+            bodyItem.eq(1).addClass('next');
+
+            prevButton.on('click', function(e){
+                e.preventDefault();
+
+                if (parentBody.find('.active').prev().length == 0 && parentHead.find('.active').prev().length == 0) {
+                    $.each(bodyItem, function(){
+                        if ($(this).hasClass('active')){
+                            myTest.checkItemVal($(this), headItem);
+                        }
+                    });
+                    return;
+                } else {
+                    $.each(bodyItem, function(){
+                        if ($(this).hasClass('active')){
+                            myTest.checkItemVal($(this), headItem);
+                        }
+                    });
+                    headItem.removeClass('next').removeClass('prev');
+                    bodyItem.removeClass('next').removeClass('prev');
+
+                    parentBody.find('.active').prev().addClass('active').next().removeClass('active');
+                    parentHead.find('.active').prev().addClass('active').next().removeClass('active');
+
+                    parentBody.find('.active').prev().addClass('prev');
+                    parentHead.find('.active').prev().addClass('prev');
+
+                    parentBody.find('.active').next().addClass('next');
+                    parentHead.find('.active').next().addClass('next');
+                }
+            });
+
+            nextButton.on('click', function(e){
+                e.preventDefault();
+
+                var activeBodyItem = parentBody.find('.active').find('input:checked'),
+                    activeBodyItemVal = activeBodyItem.val();
+
+                if (activeBodyItemVal){
+                    $.each(bodyItem, function(){
+                        if ($(this).hasClass('active')){
+                            myTest.checkItemVal($(this), headItem);
+                        }
+                    });
+                    headItem.removeClass('active');
+                    bodyItem.removeClass('active');
+
+                    parentHead.find('.next').addClass('active');
+                    parentBody.find('.next').addClass('active');
+
+                    setActiveElems();
+                } else {
+                    return;
+                }
+            });
+
+
 
             $.each(headItem, function(){
                 $(this).on('click', function(){
@@ -226,18 +308,43 @@ var myTest = (function(){
                     bodyItem.removeClass('active');
                     $(this).addClass('active');
                     bodyItem.eq($(this).index()).addClass('active');
+                    setActiveElems();
+
                 });
             });
+
+
         },
         checkItemVal: function (item, headItem) {
             if (item.find('input:checked').val() == 0 || item.find('input:checked').val() == 1){
                 headItem.eq(item.index()).addClass('complete');
-                //myTest.setResult(item.index(), item.find('input:checked').val())
+                myTest.setFinish(this.scope);
             }
             building.setCurrentResults(item.index(), item.find('input:checked').val());
         },
         getResults: function(){
             return this.results;
+        },
+        setFinish: function(scope){
+
+            var headItem = $('.js-head-item', scope),
+                finish = true;
+
+            headItem.each(function(){
+                if (!$(this).hasClass('complete')) {
+                    finish = false;
+                }
+            });
+
+            if (finish){
+                $(scope).slideToggle();
+                $('.js-repeat').show();
+
+                $('.test').addClass('complete');
+                $('.flip-container').addClass('hover');
+
+                building.setBestObject('.js-buildings', '.js-test');
+            }
         }
     }
 
@@ -279,9 +386,20 @@ var building = (function(){
                 var self = $(this);
                 that.results.forEach(function(object){
                     if(object.id == self.data('id') && object.result == false){
-                        self.addClass('js-false');
+                        self.addClass('js-false').attr('data-best-id', '0');
                     }
                 })
+            });
+            building.setBestObject(objects, scope);
+        },
+        setBestObject: function(objects, scope){
+            var max = 0;
+            $(objects, scope).each(function(){
+                if ($(this).attr('data-best-id') > max){
+                    max = $(this).attr('data-best-id');
+                    $(objects, scope).removeClass('best');
+                    $(this).addClass('best');
+                }
             });
         }
     }
@@ -289,20 +407,28 @@ var building = (function(){
 })();
 
 $(document).ready(function(){
-    if ($('.js-sticky-menu').length > 0){
+    if ($('.js-sticky-menu')){
         myStickyMenu.init('.js-sticky-menu');
     }
 
-    if ($('.js-scroll').length > 0){
+    if ($('.js-scroll')){
         myMenuScroll.init('.js-scroll');
     }
 
-    if ($('.js-test').length > 0){
+    if ($('.js-test')){
         myTest.init('/intergal/package.json', '.js-test');
     }
 
-    if($('.js-buildings, .js-result-buildings').length > 0){
+    if($('.js-buildings, .js-result-buildings')){
         building.init('.js-buildings', '.js-result-buildings');
+    }
+
+    if ($('.bx-slider')){
+        $('.bx-slider').bxSlider({
+            minSlides: 1,
+            maxSlides: 1,
+            pagerCustom: '#bx-pager',
+        });
     }
 });
 

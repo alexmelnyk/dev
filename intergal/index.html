@@ -5,6 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
@@ -88,6 +89,7 @@
 
     <section class="test" data-scroll="test">
         <h2 class="test--title">Тест: какое жилье вам подойдет</h2>
+        <button class="button red filled-red js-repeat">Пройти тест опять</button>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -103,39 +105,114 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="test--buildings js-result-buildings">
-                        <div class="test--buildings--item js-buildings" data-id="1">
-                            <p class="building icon-1"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="2">
-                            <p class="building icon-2"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="3">
-                            <p class="building icon-3"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="4">
-                            <p class="building icon-4"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="5">
-                            <p class="building icon-5"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="6">
-                            <p class="building icon-6"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="7">
-                            <p class="building icon-7"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="8">
-                            <p class="building icon-8"></p>
-                        </div>
-                        <div class="test--buildings--item js-buildings" data-id="9">
-                            <p class="building icon-9"></p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <!--
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+            <div class="front">
+                <p>ssd</p>
             </div>
+            <div class="back">
+                <p>lsdcdwc</p>
+            </div>
+        </div>
+    </div>
+        -->
+
+        <div class="test--buildings js-result-buildings">
+                    <div id="bx-pager">
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='4' data-id="1" data-slide-index="0">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-1"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/teremky.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='9' data-id="2" data-slide-index="1">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-2"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/vidradny.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='5' data-id="3" data-slide-index="2">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-3"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/nyvky.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='6' data-id="4" data-slide-index="3">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-4"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/gatne.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='3' data-id="5" data-slide-index="4">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-5"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/demeevka.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='7' data-id="6" data-slide-index="5">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-6"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/tradytsia.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='1' data-id="7" data-slide-index="6">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-7"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/malahit.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='8' data-id="8" data-slide-index="7">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-8"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/parkovi.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                        <a class="test--buildings--item js-buildings flip-container" data-best-id='2' data-id="9" data-slide-index="8">
+                            <div class="flipper">
+                                <div class="front">
+                                    <p class="building icon-9"></p>
+                                </div>
+                                <div class="back">
+                                    <img src="img/object_logos/yaskravy.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
         </div>
     </section>
 
@@ -143,33 +220,259 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
-                    <div class="objects--object">
-                        <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
-                        <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
-                        <p class="objects--object--tel">(044) 466-2-664</p>
-                        <p>
-                            Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
-                            расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
-                            5 очередей строительства.
-                        </p>
-                        <img src="img/object-img.jpg" alt="">
-                        <ul>
-                            <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
-                            <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
-                            <li>Этажность: <strong>16-25</strong></li>
-                            <li>Количество квартир: <strong>3 362</strong></li>
-                            <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
-                        </ul>
-                        <ul>
-                            <li>торговый центр с супермаркетом</li>
-                            <li>магазины и офисы</li>
-                            <li>детский сад</li>
-                            <li>паркинг на 382 машино-места</li>
-                            <li>детские и спортивные площадки</li>
-                            <li>современная эксплуатационная компания</li>
-                            <li>рядом метро «Дарница» и парк «Победа»</li>
-                        </ul>
-                        <a class="button filled-red red">Подробнее</a>
+                    <div class="bx-slider">
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
+                        <div class="objects--object bx-slide">
+                            <img class='objects--object--thumbnail' src="img/object-thumbnail.jpg" alt="">
+                            <h2 class="objects--object--title">Жилой комплекс &laquo;Парк Нивки&raquo;</h2>
+                            <p class="objects--object--tel">(044) 466-2-664</p>
+                            <p>
+                                Квартиры комфорт-класса с полноценной современной отделкой и кухонным гарнитуром.Комплекс
+                                расположен на Левом берегу Днепра, рядом с живописным парком «Победа». Проект предусматривает
+                                5 очередей строительства.
+                            </p>
+                            <img src="img/object-img.jpg" alt="">
+                            <ul>
+                                <li>Общая площадь территории комплекса: <strong>10 га</strong></li>
+                                <li>Общая площадь квартир: <strong>320 000 кв. м</strong></li>
+                                <li>Этажность: <strong>16-25</strong></li>
+                                <li>Количество квартир: <strong>3 362</strong></li>
+                                <li>Начало строительства комплекса: <strong>II квартал 2010 года</strong></li>
+                            </ul>
+                            <ul>
+                                <li>торговый центр с супермаркетом</li>
+                                <li>магазины и офисы</li>
+                                <li>детский сад</li>
+                                <li>паркинг на 382 машино-места</li>
+                                <li>детские и спортивные площадки</li>
+                                <li>современная эксплуатационная компания</li>
+                                <li>рядом метро «Дарница» и парк «Победа»</li>
+                            </ul>
+                            <a class="button filled-red red">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
