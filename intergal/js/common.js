@@ -266,6 +266,8 @@ var myTest = (function(){
 
                     parentBody.find('.active').next().addClass('next');
                     parentHead.find('.active').next().addClass('next');
+
+                    myTest.changeBG(parentHead.find('.active').index(), '.js-test-bg', '.js-bg-scope');
                 }
             });
 
@@ -286,6 +288,8 @@ var myTest = (function(){
 
                     parentHead.find('.next').addClass('active');
                     parentBody.find('.next').addClass('active');
+
+                    myTest.changeBG(parentHead.find('.active').index(), '.js-test-bg', '.js-bg-scope');
 
                     setActiveElems();
                 } else {
@@ -308,6 +312,8 @@ var myTest = (function(){
                     bodyItem.removeClass('active');
                     $(this).addClass('active');
                     bodyItem.eq($(this).index()).addClass('active');
+                    myTest.changeBG($(this).index(), '.js-test-bg', '.js-bg-scope');
+
                     setActiveElems();
 
                 });
@@ -345,6 +351,12 @@ var myTest = (function(){
 
                 building.setBestObject('.js-buildings', '.js-test');
             }
+        },
+        changeBG: function(index, elems, scope){
+
+            $(elems).removeClass('active');
+            $(scope).find('[data-bg="' + index + '"]').addClass('active');
+
         }
     }
 
@@ -407,6 +419,7 @@ var building = (function(){
 })();
 
 $(document).ready(function(){
+
     if ($('.js-sticky-menu')){
         myStickyMenu.init('.js-sticky-menu');
     }
@@ -428,6 +441,7 @@ $(document).ready(function(){
             minSlides: 1,
             maxSlides: 1,
             pagerCustom: '#bx-pager',
+            controls: true
         });
     }
 });

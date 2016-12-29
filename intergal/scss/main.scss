@@ -378,6 +378,56 @@
 	background-size:cover;
 	padding: 50px 0;
 	text-align: center;
+	position: relative;
+	.test-bg{
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		-webkit-background-size:cover;
+		background-size:cover;
+		opacity: 0;
+		@include transition(all, .3s, ease);
+		&[data-bg="0"]{
+			background-image: url("../img/questions_bg/1-min.jpg");
+		}
+		&[data-bg="1"]{
+			background-image: url("../img/questions_bg/2-min.jpg");
+		}
+		&[data-bg="2"]{
+			background-image: url("../img/questions_bg/8-min.jpg");
+		}
+		&[data-bg="3"]{
+			background-image: url("../img/questions_bg/5-min.jpg");
+		}
+		&[data-bg="4"]{
+			background-image: url("../img/questions_bg/4-min.jpg");
+		}
+		&[data-bg="5"]{
+			background-image: url("../img/questions_bg/3-min.jpg");
+		}
+		&[data-bg="6"]{
+			background-image: url("../img/questions_bg/7-min.jpg");
+		}
+		&[data-bg="7"]{
+			background-image: url("../img/questions_bg/6-min.jpg");
+		}
+		&.active{
+			opacity: 1;
+		}
+		&:after{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.6);
+		}
+	}
 	&--title{
 		text-align: center;
 		color: $white;
@@ -436,6 +486,10 @@
 	}
 	&.complete{
 		padding-bottom: 0;
+		.test-bg{
+			opacity: 0 !important;
+			display: none !important;
+		}
 		.test--buildings{
 			position: relative;
 			background: rgba(255,255,255,1);
