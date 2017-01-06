@@ -1,0 +1,23 @@
+<div class="test--wrapper--head"
+     ng-hide="testData.complete == true">
+
+    <div class="head-item"
+         ng-repeat="question in questions"
+         ng-click="setId(question.id)"
+         ng-style="{
+            width : 100 / questions.length + '%',
+            background: 'url(' + question.bgUrl + ')'
+            }"
+         ng-class="{
+            active: testData.questionId == question.id,
+            done: testData.done[question.id] == true
+            }">
+        <p class="head-item--index">{{question.id}}</p>
+        <i class="medium material-icons head-item--active-icon">info_outline</i>
+        <i class="medium material-icons head-item--done-icon">done</i>
+    </div>
+
+</div>
+
+
+
