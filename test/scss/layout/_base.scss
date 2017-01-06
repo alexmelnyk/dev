@@ -1,0 +1,138 @@
+//@import "variables";
+
+//mixins
+
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+@mixin transition-property($property...) {
+	-moz-transition-property:    $property;
+	-o-transition-property:      $property;
+	-webkit-transition-property: $property;
+	transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+	-moz-transition-property:    $duration;
+	-o-transition-property:      $duration;
+	-webkit-transition-property: $duration;
+	transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function:    $timing;
+	-o-transition-timing-function:      $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+	-moz-transition-delay:    $delay;
+	-o-transition-delay:      $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay:         $delay;
+}
+
+@mixin transform($val) {
+	-webkit-transform: $val;
+	-moz-transform: $val;
+	-ms-transform: $val;
+	transform: $val;
+}
+
+@mixin box-shadow($val) {
+	box-shadow: $val;
+	-webkit-box-shadow: $val;
+	-moz-box-shadow: $val;
+	-o-box-shadow: $val;
+}
+
+
+body,
+html{
+	height: 100%;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+button{
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	font-size: 16px;
+	list-style: none;
+	text-align: left;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+div,
+section{
+	font-size: 0;
+}
+
+ul,li{
+	padding: 0;
+	margin: 0;
+}
+
+img{
+	max-width: 100%;
+}
+
+/*.button{
+	text-transform: uppercase;
+	background: none;
+	border: none;
+	width: 300px;
+	height: 50px;
+	font-size: 18px;
+	@include transition(all, .3s, ease);
+	&.white{
+		border: 2px solid $white;
+	}
+	&.red{
+		border: 2px solid $red;
+	}
+	&.filled-red{
+		background: $red;
+	}
+	&:hover{
+		background: $red;
+		border: 2px solid $red;
+		@include box-shadow(inset 0px 0px 0px 2px $white);
+	}
+	&:focus{
+		outline: none;
+	}
+}*/
+
+.input{
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	&:focus,
+	&:hover,
+	&:active{
+		border: none;
+		outline: none;
+	}
+}
+
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}

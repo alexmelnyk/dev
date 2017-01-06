@@ -1,0 +1,42 @@
+<div class="test--wrapper--body"
+     ng-hide="testData.complete == true">
+        <div class="test--wrapper--body--item" ng-repeat="question in questions">
+            <div ng-show="testData.questionId == question.id">
+                <p class="question">{{question.question}}</p>
+                <div class="input-item-wrap">
+                    <input class='with-gap'
+                           type="radio"
+                           id="{{question.id + '0'}}"
+                           value="0"
+                           ng-click="isDone(question.id)"
+                           ng-model="answers[question.id]">
+                    <label for="{{question.id + '0'}}">{{question.answers[0]}}</label>
+                </div>
+                <div class="input-item-wrap">
+                    <input class='with-gap'
+                           type="radio"
+                           id="{{question.id + '1'}}"
+                           value="1"
+                           ng-click="isDone(question.id)"
+                           ng-model="answers[question.id]">
+                    <label for="{{question.id + '1'}}">{{question.answers[1]}}</label>
+                </div>
+            </div>
+        </div>
+
+    <a class="waves-effect waves-light btn"
+       ng-click="stepBack()"
+       ng-class="{disabled: testData.questionId <= 1}">назад</a>
+    <a class="waves-effect waves-light btn"
+       ng-click="stepForward()"
+       ng-class="{disabled: testData.done[testData.questionId] == false || !testData.done[testData.questionId]}">дальше</a>
+</div>
+<div class="objects">
+    <div class="objects--item"
+         ng-repeat="object in testData.objects"
+         ng-style="{width: 100 / testData.objects.length + '%'}"
+         ng-class="{invalid: object.status == false}">
+
+        <img src="img/object_logos/{{object.logo}}" alt="">
+    </div>
+</div>

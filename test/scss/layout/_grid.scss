@@ -1,0 +1,146 @@
+  //----- Config
+  //$sizes: xs sm md lg;
+  $sizes: lg md sm xs;
+
+  $screen-xs: 480px;
+  $screen-sm: 768px;
+  $screen-md: 992px;
+  $screen-lg: 1240px;
+
+  $grid-columns: 12;
+  $grid-gutter-width: 20px;
+
+  $container-sm: (300px + $grid-gutter-width);
+  $container-sm: (720px + $grid-gutter-width);
+  $container-md: (940px + $grid-gutter-width);
+  $container-lg: (1120px + $grid-gutter-width);
+
+  //----- Extends
+  %clearfix:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  .clearfix {
+    @extend %clearfix;
+  }
+
+  //----- Container
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+    max-width: 960px;
+
+    //@media (min-width: $screen-sm) {
+    //  width: $container-sm;
+    //}
+
+    //@media (min-width: $screen-sm) {
+    //  width: $container-sm;
+    //}
+
+    //@media (min-width: $screen-md) {
+    //  width: $container-md;
+    //}
+
+    @media (min-width: $screen-lg) {
+      width: $container-lg;
+    }
+
+    @extend %clearfix;
+  }
+
+  //----- Rows
+  .row {
+    @extend %clearfix;
+    margin-left: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width/2;
+  }
+
+  //----- Columns
+  [class^="col-"],
+  [class*=" col-"] {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+  }
+
+  $column-width: 100% / $grid-columns;
+  @each $size in $sizes {
+    @for $i from 1 through $grid-columns {
+      .col-#{$size}-#{$i} {
+        width: $i * $column-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    @for $i from 1 through $grid-columns {
+      .col-md-#{$i} {
+        width: $i * $column-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    @for $i from 1 through $grid-columns {
+      .col-lg-#{$i} {
+        width: $i * $column-width;
+      }
+    }
+  }
+
+  //----- Offset
+  @each $size in $sizes {
+    @for $i from 1 through $grid-columns {
+      .col-#{$size}-offset-#{$i} {
+        margin-left: $i * $column-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    @for $i from 1 through $grid-columns {
+      .col-md-offset-#{$i} {
+        margin-left: $i * $column-width;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    @for $i from 1 through $grid-columns {
+      .col-lg-offset-#{$i} {
+        margin-left: $i * $column-width;
+      }
+    }
+  }
+
+  //----- Hidden
+  @media (max-width: ($screen-sm - 1)) {
+    .hidden-xs {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: $screen-sm) and (max-width: ($screen-md - 1)) {
+    .hidden-sm {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: $screen-md) and (max-width: ($screen-lg - 1)) {
+    .hidden-md {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .hidden-lg {
+      display: none !important;
+    }
+  }

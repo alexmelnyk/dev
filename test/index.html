@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="test">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/test-list.controller.js"></script>
+    <script src="js/controllers/test-detail.controller.js"></script>
+    <script src="js/services/get-data.service.js"></script>
+
+</head>
+
+<body>
+
+    <section class="test">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="test--wrapper">
+                        <div ng-controller="testList">
+                            <list></list>
+                        </div>
+                        <div ng-controller="testDetail">
+                            <list-detail></list-detail>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+
+</html>
